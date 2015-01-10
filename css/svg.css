@@ -1,0 +1,91 @@
+.box {
+  width: 550px;
+  margin: 100px auto;
+}
+.box:hover .bdT,
+.box:hover .bdB {
+  width: 0;
+}
+.box:hover .bdR,
+.box:hover .bdL {
+  height: 0;
+}
+.box:hover .path {
+  fill: #000F5B;
+}
+
+.path {
+  stroke: #092951;
+  fill: none;
+  stroke-width: 1;
+  stroke-dasharray: 1000;
+  -webkit-animation: DASH 3s ease-in alternate forwards;
+          animation: DASH 3s ease-in alternate forwards;
+}
+
+@-webkit-keyframes DASH {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes DASH {
+  0% {
+    stroke-dashoffset: 1000;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.bd {
+  width: 550px;
+  height: 120px;
+  text-align: center;
+  position: relative;
+  padding: 75px 0;
+}
+
+.bd div {
+  background: #092951;
+  position: absolute;
+  -webkit-transition: all 1.4s ease-in-out;
+          transition: all 1.4s ease-in-out;
+}
+
+.active .bdT {
+  width: 100%;
+  height: 1px;
+  top: 0;
+  left: 0;
+}
+.active .bdB {
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+}
+.active .bdR {
+  height: 100%;
+  width: 1px;
+  right: 0;
+  top: 0;
+}
+.active .bdL {
+  height: 100%;
+  width: 1px;
+  left: 0;
+  top: 0;
+}
+
+.bdT,
+.bdB {
+  width: 0;
+}
+
+.bdR,
+.bdL {
+  height: 0;
+}

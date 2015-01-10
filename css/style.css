@@ -1,0 +1,83 @@
+h1 {
+  color: red;
+}
+
+.global_stage {
+  width: 500px;
+  height: 100px;
+  -webkit-perspective: 400px;
+          perspective: 400px;
+}
+
+.stage {
+  width: 100px;
+  height: 100px;
+  float: left;
+}
+
+.cube {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  margin: 0 auto;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  -webkit-transition: all 1s;
+          transition: all 1s;
+}
+.cube:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+}
+.cube div {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.side_left {
+  left: -50px;
+  -webkit-transform: rotateY(-90deg);
+          transform: rotateY(-90deg);
+  background-color: black;
+}
+
+.side_front {
+  -webkit-transform: translateZ(50px);
+          transform: translateZ(50px);
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.side_back {
+  top: 0;
+  left: 0;
+  -webkit-transform: translateZ(-50px);
+          transform: translateZ(-50px);
+  background-color: orange;
+  opacity: 0.5;
+}
+
+.side_bottom {
+  bottom: -50px;
+  -webkit-transform: rotateX(-90deg);
+          transform: rotateX(-90deg);
+  background-color: red;
+}
+
+.side_top {
+  top: -50px;
+  left: 0;
+  -webkit-transform: rotateX(90deg);
+          transform: rotateX(90deg);
+  background-color: purple;
+}
+
+.side_right {
+  right: -50px;
+  -webkit-transform: rotateY(90deg);
+          transform: rotateY(90deg);
+  background-color: red;
+}
